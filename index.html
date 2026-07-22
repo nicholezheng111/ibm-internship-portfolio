@@ -14,7 +14,7 @@
   --magenta:#ee5396;--green:#24a148;--orange:#ff832b;
   --yellow:#f1c21b;--red:#da1e28;
 }
-body{font-family:'IBM Plex Sans',-apple-system,'Segoe UI',system-ui,sans-serif;background:var(--g10);color:var(--g100);font-size:15px;line-height:1.6}
+body{font-family:'IBM Plex Sans',-apple-system,'Segoe UI',system-ui,sans-serif;background:var(--g10);color:var(--g100);font-size:16px;line-height:1.6}
 
 /* ─── HEADER ─── */
 header{background:var(--g100);color:var(--white)}
@@ -39,21 +39,29 @@ nav a{color:#d0e2ff;text-decoration:none;font-size:13px;padding:13px 18px;white-
 nav a:hover{color:#fff;border-bottom-color:#fff}
 
 /* ─── MAIN ─── */
-main{max-width:1100px;margin:0 auto;padding:48px 32px 80px}
+main{max-width:1200px;margin:0 auto;padding:36px 32px 80px}
 
 /* ─── STATS BAR ─── */
 .stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--g20);border:1px solid var(--g20);margin-bottom:44px}
-.stat{background:var(--white);padding:22px 26px}
-.stat-n{font-size:36px;font-weight:300;color:var(--blue);line-height:1}
-.stat-l{font-size:13px;color:var(--g70);margin-top:4px}
+.stat{background:var(--white);padding:24px 28px}
+.stat-n{font-size:40px;font-weight:300;color:var(--blue);line-height:1}
+.stat-l{font-size:14px;color:var(--g70);margin-top:5px}
 
 /* ─── SECTION HEADING ─── */
 .sec-title{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--g70);margin-bottom:22px;padding-bottom:9px;border-bottom:1px solid var(--g20);display:flex;align-items:center;gap:10px}
 .sec-title::before{content:'';display:inline-block;width:3px;height:14px;background:var(--blue);border-radius:1px}
 
+/* ─── FEATURED CARDS ─── */
+.featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--g20);margin-bottom:44px}
+.card.featured{border-top:3px solid var(--blue)}
+.featured-rank{font-size:22px;margin-bottom:8px}
+.featured-bullets{list-style:none;padding:0;margin-top:10px}
+.featured-bullets li{font-size:14px;color:#393939;padding:4px 0 4px 18px;position:relative;line-height:1.5}
+.featured-bullets li::before{content:'→';position:absolute;left:0;color:var(--blue);font-weight:700}
+
 /* ─── CARDS GRID ─── */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(480px,1fr));gap:2px;background:var(--g20);margin-bottom:44px}
-.card{background:var(--white);padding:30px 30px 26px;position:relative;overflow:hidden}
+.card{background:var(--white);padding:32px 32px 28px;position:relative;overflow:hidden}
 .card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%}
 .c-blue::before{background:var(--blue)}
 .c-cyan::before{background:var(--cyan)}
@@ -75,16 +83,16 @@ main{max-width:1100px;margin:0 auto;padding:48px 32px 80px}
 .t-orange{background:#ffd9be;color:#8e3a00}
 .t-green{background:#a7f0ba;color:#044317}
 .t-yellow{background:#fcf4d6;color:#8e6a00}
-.card h2{font-size:17px;font-weight:600;color:var(--g100);margin-bottom:4px;line-height:1.3}
-.card .sub{font-size:12px;color:var(--g70);margin-bottom:16px;font-style:italic}
-.cl{font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--g70);margin-bottom:7px;margin-top:14px;font-weight:600}
+.card h2{font-size:19px;font-weight:600;color:var(--g100);margin-bottom:4px;line-height:1.3}
+.card .sub{font-size:13px;color:var(--g70);margin-bottom:16px;font-style:italic}
+.cl{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--g70);margin-bottom:8px;margin-top:16px;font-weight:600}
 ul.bl{list-style:none;padding:0}
-ul.bl li{font-size:13px;color:#393939;padding:3px 0 3px 16px;position:relative;line-height:1.5}
+ul.bl li{font-size:14px;color:#393939;padding:4px 0 4px 18px;position:relative;line-height:1.55}
 ul.bl li::before{content:'—';position:absolute;left:0;color:var(--blue);font-weight:700}
 .pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
-.pill{font-size:11px;background:var(--g10);border:1px solid var(--g20);color:#393939;padding:3px 9px;border-radius:10px}
-.dtags{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
-.dtag{font-size:11px;background:var(--blue-light);color:var(--blue-dark);padding:2px 8px;border-radius:2px;font-weight:500}
+.pill{font-size:12px;background:var(--g10);border:1px solid var(--g20);color:#393939;padding:4px 10px;border-radius:10px}
+.dtags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.dtag{font-size:12px;background:var(--blue-light);color:var(--blue-dark);padding:3px 10px;border-radius:2px;font-weight:500}
 
 /* ─── IMAGE GALLERY ─── */
 .img-gallery{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
@@ -140,6 +148,7 @@ footer span{color:#a8a8a8}
   .skills-grid{grid-template-columns:1fr}
   .hero-meta{gap:20px}
   .journey-arrow{transform:rotate(90deg)}
+  .featured-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -182,8 +191,8 @@ footer span{color:#a8a8a8}
 <div class="stats-bar" id="overview" style="margin-top:40px">
   <div class="stat"><div class="stat-n">9</div><div class="stat-l">Projects</div></div>
   <div class="stat"><div class="stat-n">13</div><div class="stat-l">Products Supported</div></div>
-  <div class="stat"><div class="stat-n" style="font-size:18px;line-height:1.2">AI-Powered</div><div class="stat-l">Dashboard</div></div>
-  <div class="stat"><div class="stat-n" style="font-size:18px;line-height:1.2">Enterprise</div><div class="stat-l">Sales Focus</div></div>
+  <div class="stat"><div class="stat-n">20+</div><div class="stat-l">IBM Leaders Engaged</div></div>
+  <div class="stat"><div class="stat-n">8</div><div class="stat-l">Business Functions</div></div>
 </div>
 
 <!-- JOURNEY -->
@@ -218,6 +227,48 @@ footer span{color:#a8a8a8}
     <div class="journey-title">Final Deliverables</div>
     <div class="journey-desc">Geo analytics website, networking doc &amp; internship presentation</div>
   </div>
+</div>
+
+<!-- FEATURED PROJECTS -->
+<div class="sec-title" id="featured">⭐ Featured Projects</div>
+<div class="featured-grid">
+
+  <div class="card featured c-blue">
+    <div class="featured-rank">🥇</div>
+    <span class="card-tag t-blue">Revenue Analytics</span>
+    <h2>Active Customer Revenue Dashboard</h2>
+    <p class="sub">Centralized reporting solution across 13 Data Fabric products</p>
+    <ul class="featured-bullets">
+      <li>Built centralized reporting solution using IBM EPM</li>
+      <li>Interactive Excel dashboard with pivot tables &amp; filters</li>
+      <li>Supported 13 Data Fabric products</li>
+    </ul>
+  </div>
+
+  <div class="card featured c-purple">
+    <div class="featured-rank">🥈</div>
+    <span class="card-tag t-purple">AI-Powered</span>
+    <h2>AI-Powered Geo Analytics Portal</h2>
+    <p class="sub">Interactive website built with IBM Bob</p>
+    <ul class="featured-bullets">
+      <li>Built with IBM Bob — IBM's internal AI assistant</li>
+      <li>Interactive website for regional revenue visualization</li>
+      <li>Transformed spreadsheet data into a searchable dashboard</li>
+    </ul>
+  </div>
+
+  <div class="card featured c-orange">
+    <div class="featured-rank">🥉</div>
+    <span class="card-tag t-orange">Account Strategy</span>
+    <h2>Enterprise Account Strategy Analysis</h2>
+    <p class="sub">Fortune 500 strategic account research</p>
+    <ul class="featured-bullets">
+      <li>Fortune 500 account research &amp; financial analysis</li>
+      <li>IBM AI, automation &amp; data solution mapping</li>
+      <li>Executive-ready assessment &amp; recommendations</li>
+    </ul>
+  </div>
+
 </div>
 
 <!-- RESEARCH -->
@@ -364,11 +415,11 @@ footer span{color:#a8a8a8}
     <div class="dtags"><span class="dtag">Account Strategy</span><span class="dtag">Market Research</span><span class="dtag">Solution Mapping</span></div>
   </div>
 
-  <!-- P5: Geo Propensity (full width) -->
+  <!-- P5: AI-Powered Geo Analytics Portal (full width) -->
   <div class="card c-purple full">
-    <span class="card-tag t-purple">Geo Analytics</span>
-    <h2>Geo Propensity Analysis</h2>
-    <p class="sub">Project: Geo Analysis</p>
+    <span class="card-tag t-purple">AI-Powered · Geo Analytics</span>
+    <h2>AI-Powered Geo Analytics Portal</h2>
+    <p class="sub">Built with IBM Bob — Interactive regional revenue dashboard</p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
       <div>
         <div class="cl">What I Did</div>
